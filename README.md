@@ -381,3 +381,7 @@ Dynamically changing positioning and rotation of audio source or room container 
 [HTMLElement]: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
 [THREE_Vector3]: https://github.com/mrdoob/three.js/blob/master/src/math/Vector3.js
 [AComponent]: https://github.com/aframevr/aframe/blob/master/src/core/component.js
+
+## Attributions
+
+- Keiko Takahashi - Track 3 Tears of Black Sea Exerpt

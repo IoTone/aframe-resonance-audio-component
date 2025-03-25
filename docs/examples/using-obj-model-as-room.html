@@ -4,18 +4,19 @@
 <title><%= htmlWebpackPlugin.options.title %> - Using obj-model as room</title>
 <meta charset=utf-8 />
 <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
-<script src="assets/aframe/aframe.min.js"></script>
+<script src="assets/aframe/aframe-v1.3.0.min.js"></script>
 <%= htmlWebpackPlugin.tags.headTags %>
 <body>
 
-<header is="example-header" title="Using obj-model as room"></header>
+<header is="example-header" title="Aframe Resonance Audio - Using obj-model as room"></header>
 <main>
 <!-- EXAMPLE -->
 <a-scene embedded>
   <a-assets>
     <a-asset-item id="room-obj" src="assets/static/models/room/room-model.obj"></a-asset-item>
     <a-asset-item id="room-mtl" src="assets/static/models/room/room-materials.mtl"></a-asset-item>
-    <audio id="track" src="assets/static/audio/track.mp3"></audio>
+    <audio id="track" src="assets/static/audio/03_Tears_of_BlackSea_edit_1_keiko.mp3"></audio>
+    <img id="image-ocean" src="assets/static/img/pexels-pixabay-37403.jpg">
   </a-assets>
   <!-- ENVIRONMENT -->
   <a-entity
@@ -37,7 +38,21 @@
         loop: true;
         autoplay: true;"></a-entity>
   </a-entity>
+
   <a-camera position="5 1.6 4" rotation="0 45 0"></a-camra>
+  <!-- Behind wall -->
+  <a-box width="62.5" height="35" depth="0.25" position="0 0 95" rotation="0 180 0" color="#fff">
+    <a-entity position="0 0 25">
+      <a-camera id="camera-4" active="false"></a-camera>
+    </a-entity>
+
+    <!-- Middle image: Ines -->
+    <a-box width="18" height="12" depth="0.25" position="-1.25 -1.5 0.3"></a-box>
+    <a-box width="6" height="1" depth="0.25" position="-1.25 -9 0.15">
+      <a-text value="Ines" color="#000" position="0 0 0.25" scale="2.5 2.5 0.5" align="center"></a-text>
+    </a-box>
+    <a-image src="#image-ocean" width="18" height="12" depth="0.1" position="-1.25 -1.5 0.45"></a-image>
+  </a-box>
 </a-scene>
 <!-- / EXAMPLE -->
 </main>
